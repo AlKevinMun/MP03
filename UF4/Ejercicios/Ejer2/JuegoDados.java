@@ -1,4 +1,4 @@
-package UF4.Ejercicios.Ejer2;
+/*package UF4.Ejercicios.Ejer2;
 
 public class JuegoDados {
     private Dado dado1 = new Dado();
@@ -33,3 +33,4 @@ public class JuegoDados {
         return false;
     }
 }
+ */

@@ -1,4 +1,4 @@
-package UF4.Ejercicios.Ejer2;
+/*package UF4.Ejercicios.Ejer2;
 import java.util.Date;
 import java.util.Scanner;
 public class MainApp {
@@ -48,3 +48,4 @@ public class MainApp {
         }
     }
 }
+*/

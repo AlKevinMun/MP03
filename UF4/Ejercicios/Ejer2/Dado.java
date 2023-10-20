@@ -1,4 +1,4 @@
-package UF4.Ejercicios.Ejer2;
+//package UF4.Ejercicios.Ejer2;
 
 public class Dado {
 

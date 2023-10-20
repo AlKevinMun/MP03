@@ -28,7 +28,6 @@ public class Daus {
             System.out.println("El numero "+i+" ha salido un total de "+resultados[i-1]+" veces");
         }
 
-
     }
 
 }
