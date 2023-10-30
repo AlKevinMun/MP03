@@ -157,7 +157,7 @@ public class Main {
             }
         }
         for (int i = 2; i <=  12; i++) {
-            System.out.println(i+":"+mapadados.get(i));
+            System.out.println(i+": "+mapadados.get(i));
         }
 
         // punt 15
