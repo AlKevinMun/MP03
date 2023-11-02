@@ -34,8 +34,10 @@ public class ExerciciL {
             }
         });
          */
+        System.out.println("---Punto 1 termina---");
 
         llistaPersones.sort((a1,a2) -> {if(a1.getNom().charAt(0) >= a2.getNom().charAt(0)) return 1; else return -1;});
+
 
         // 2 - Canviar a Lambda
         /*
@@ -43,14 +45,16 @@ public class ExerciciL {
             System.out.println(p);
         }
         */
+        System.out.println("---Punto 2 termina---");
         System.out.println("Ordenador por primera letra");
-        llistaPersones.forEach(persona -> System.out.println());
+        llistaPersones.forEach(persona -> System.out.println(persona));
 
 
         // 3 - Canvia a classe anònima
         // ordenació alfabètica inversa del nom
         //llistaPersones.sort((o1,o2) -> o2.getNom().compareTo(o1.getNom()));
 
+        System.out.println("---Punto 3 termina---");
         Collections.sort(llistaPersones, new Comparator<Persona>() {
             @Override
             public int compare(Persona o1, Persona o2) {
@@ -59,30 +63,45 @@ public class ExerciciL {
             }
         });
 
+
         // 4 - fes servir un reference method en comptes del for-loop
         /*
         for(Persona p: llistaPersones) {
             System.out.println(p);
         };
         */
+        System.out.println("---Punto 4 termina---");
         System.out.println("Ordenado inverso");
         llistaPersones.forEach(System.out::println);
 
+
         // 5 - Omplir map. Canviar el for-llop per un forEach amb lambda
+        /*
         for(Persona per : llistaPersones) {
             mapPersones.put(per.getAge(),1);
         }
+         */
+        System.out.println("---Punto 5 termina---");
+
+        llistaPersones.forEach(persona -> mapPersones.put(persona.getAge(),1));
+
 
         // 6 - Canvia el for-loop per un recorregut forEach amb lambda
+        /*
         for(Map.Entry entry : mapPersones.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
+         */
+        System.out.println("---Punto 6 termina---");
+
+        mapPersones.entrySet().forEach(entry -> System.out.println(entry.getKey() + " : " + entry.getValue()));
+
 
         /* 7 -
             Esbrina com s'utilitzen i perquè serveixen els mètodes de map següents
-                map.putIfAbsent
-                map.computeIfAbsent
-                map.computeIfPresent
+                map.putIfAbsent -> Si no esta ponlo
+                map.computeIfAbsent -> Procesa/ejecuta si no esta
+                map.computeIfPresent -> Procesa/ejecuta si esta
 
              afegeix al map la freqüència d'edat de les persones, de la llistaPersones
 
