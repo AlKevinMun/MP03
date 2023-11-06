@@ -43,6 +43,10 @@ public class Main {
 
         Scanner scanner2 = new Scanner(new File("UF5/ejercicios/ej2/santako.txt"));
 
+        String santa="*<]:-DOo";
+        String reno=">:o)";
+        String elfo="<]:-D";
+
         while (scanner2.hasNext()){
             String linea1 = scanner2.nextLine();
 
@@ -50,7 +54,18 @@ public class Main {
             int cReno2 = 0;
             int cElfo2 = 0;
 
-            //if (){};
+            for (int i = 0; i < linea1.length(); i++) {
+                if (linea1.substring(i).startsWith(santa)) cSanta2++; //El SubString lo que hace es pasar caracter por caracter, y si encuentra el primer caracter de santa, entonces el if da true.
+                if (linea1.substring(i).startsWith(reno)) cReno2++;
+                if (linea1.substring(i).startsWith(elfo)) cElfo2++;
+            }
+            cElfo2 = cElfo2-cSanta2;
+
+            if (cSanta2!=0) System.out.print("Pare Noel "+"("+cSanta2+") ");
+            if (cReno2!=0) System.out.print("Ren "+"("+cReno2+")");
+            if (cElfo2!=0) System.out.print("Follet "+"("+cElfo2+")");
+
+            System.out.println("");
         }
 
 
